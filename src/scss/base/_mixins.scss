@@ -5,13 +5,21 @@
         @content;
     }
 }
+
 @mixin tablet {
     @media (min-width: v.$tablet) {
         @content;
     }
 }
+
 @mixin desktop {
     @media (min-width: v.$desktop) {
         @content;
     }
+}
+
+@mixin grid($col, $gap) {
+    display: grid;
+    grid-template-columns: repeat($col, 1fr);
+    gap: $gap;
 }
